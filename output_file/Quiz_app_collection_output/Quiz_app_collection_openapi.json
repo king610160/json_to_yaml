@@ -1,0 +1,1028 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Quiz_app",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api/v1"
+    }
+  ],
+  "paths": {
+    "/users/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Login",
+        "description": "Login",
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "1"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "1"
+                  }
+                }
+              },
+              "examples": {
+                "Login": {
+                  "value": {
+                    "email": "1",
+                    "password": "1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Register",
+        "description": "Register",
+        "operationId": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "comfirmPassword": {
+                    "type": "string",
+                    "example": "5"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "5"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "5"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "5"
+                  }
+                }
+              },
+              "examples": {
+                "Register": {
+                  "value": {
+                    "comfirmPassword": "5",
+                    "email": "5",
+                    "name": "5",
+                    "password": "5"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/admin/users": {
+      "get": {
+        "tags": [
+          "Admin",
+          "Admin/Users"
+        ],
+        "summary": "Admin : Get all users",
+        "description": "Admin : Get all users",
+        "operationId": "adminGetAllUsers",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/admin/users/95": {
+      "delete": {
+        "tags": [
+          "Admin",
+          "Admin/Users"
+        ],
+        "summary": "Admin : Delete a user",
+        "description": "Admin : Delete a user",
+        "operationId": "adminDeleteAUser",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/admin/category": {
+      "get": {
+        "tags": [
+          "Admin",
+          "Admin/Category"
+        ],
+        "summary": "Admin : Get all category",
+        "description": "Admin : Get all category",
+        "operationId": "adminGetAllCategory",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Admin",
+          "Admin/Category"
+        ],
+        "summary": "Admin : Create a new category",
+        "description": "Admin : Create a new category",
+        "operationId": "adminCreateANewCategory",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "NN"
+                  }
+                }
+              },
+              "examples": {
+                "Admin : Create a new category": {
+                  "value": {
+                    "name": "NN"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/admin/category/9": {
+      "get": {
+        "tags": [
+          "Admin",
+          "Admin/Category"
+        ],
+        "summary": "Admin : Get edit category page",
+        "description": "Admin : Get edit category page",
+        "operationId": "adminGetEditCategoryPage",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Admin",
+          "Admin/Category"
+        ],
+        "summary": "Admin : Edit a category",
+        "description": "Admin : Edit a category",
+        "operationId": "adminEditACategory",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "FFCC"
+                  }
+                }
+              },
+              "examples": {
+                "Admin : Edit a category": {
+                  "value": {
+                    "name": "FFCC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/admin/category/10": {
+      "delete": {
+        "tags": [
+          "Admin",
+          "Admin/Category"
+        ],
+        "summary": "Admin : Delete a category",
+        "description": "Admin : Delete a category",
+        "operationId": "adminDeleteACategory",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/admin/quiz": {
+      "get": {
+        "tags": [
+          "Admin",
+          "Admin/Quiz"
+        ],
+        "summary": "Admin : Get all quiz",
+        "description": "Admin : Get all quiz",
+        "operationId": "adminGetAllQuiz",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/plan": {
+      "get": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Get all plan",
+        "description": "Plan : Get all plan",
+        "operationId": "planGetAllPlan",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Create a new plan",
+        "description": "Plan : Create a new plan",
+        "operationId": "planCreateANewPlan",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "a hooo"
+                  }
+                }
+              },
+              "examples": {
+                "Plan : Create a new plan": {
+                  "value": {
+                    "name": "a hooo"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/plan/14": {
+      "delete": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Delete a plan",
+        "description": "Plan : Delete a plan",
+        "operationId": "planDeleteAPlan",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/plan/defaultFolder/4": {
+      "post": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Change default folder",
+        "description": "Plan : Change default folder",
+        "operationId": "planChangeDefaultFolder",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/plan/7": {
+      "get": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Get to single plan",
+        "description": "Plan : Get to single plan",
+        "operationId": "planGetToSinglePlan",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/plan/quiz/29": {
+      "delete": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Delete a quiz from a plan",
+        "description": "Plan : Delete a quiz from a plan",
+        "operationId": "planDeleteAQuizFromAPlan",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "planId": {
+                    "type": "string",
+                    "example": "7"
+                  }
+                }
+              },
+              "examples": {
+                "Plan : Delete a quiz from a plan": {
+                  "value": {
+                    "planId": "7"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/collect/35": {
+      "post": {
+        "tags": [
+          "Plan"
+        ],
+        "summary": "Plan : Add a quiz to plan",
+        "description": "Plan : Add a quiz to plan",
+        "operationId": "planAddAQuizToPlan",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/test/2": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "summary": "Test : Get test page",
+        "description": "Test : Get test page",
+        "operationId": "testGetTestPage",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/test/7": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "summary": "Test : Post the test",
+        "description": "Test : Post the test",
+        "operationId": "testPostTheTest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "1_select4": {
+                    "type": "string",
+                    "example": "Africa"
+                  },
+                  "2_select3": {
+                    "type": "string",
+                    "example": "300"
+                  },
+                  "3_select3": {
+                    "type": "string",
+                    "example": "3333"
+                  }
+                }
+              },
+              "examples": {
+                "Test : Post the test": {
+                  "value": {
+                    "1_select4": "Africa",
+                    "2_select3": "300",
+                    "3_select3": "3333"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/result": {
+      "get": {
+        "tags": [
+          "Result"
+        ],
+        "summary": "Result : Get all test result",
+        "description": "Result : Get all test result",
+        "operationId": "resultGetAllTestResult",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/result/4": {
+      "get": {
+        "tags": [
+          "Result"
+        ],
+        "summary": "Result : Get a single test result, and quiz inside.",
+        "description": "Result : Get a single test result, and quiz inside.",
+        "operationId": "resultGetASingleTestResultAndQuizInside",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/result/18": {
+      "delete": {
+        "tags": [
+          "Result"
+        ],
+        "summary": "Result : Delete a test result",
+        "description": "Result : Delete a test result",
+        "operationId": "resultDeleteATestResult",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/info": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "User : Get user info",
+        "description": "User : Get user info",
+        "operationId": "userGetUserInfo",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/info/1": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "User : Update user info",
+        "description": "User : Update user info",
+        "operationId": "userUpdateUserInfo",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "example": "Hi! I'm Micky."
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Micky"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/user/collect/4": {
+      "post": {
+        "tags": [
+          "Collect"
+        ],
+        "summary": "Collect : Add quiz to plan",
+        "description": "Collect : Add quiz to plan",
+        "operationId": "collectAddQuizToPlan",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/quiz/2": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz : Get edit quiz page",
+        "description": "Quiz : Get edit quiz page",
+        "operationId": "quizGetEditQuizPage",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/quiz/33": {
+      "delete": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz : Delete quiz",
+        "description": "Quiz : Delete quiz",
+        "operationId": "quizDeleteQuiz",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/quiz": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz : Get quiz page",
+        "description": "Quiz : Get quiz page",
+        "operationId": "quizGetQuizPage",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz : Create a new quiz",
+        "description": "Quiz : Create a new quiz",
+        "operationId": "quizCreateANewQuiz",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "answer": {
+                    "type": "string",
+                    "example": "select1"
+                  },
+                  "question": {
+                    "type": "string",
+                    "example": "88"
+                  },
+                  "select1": {
+                    "type": "string",
+                    "example": "88"
+                  },
+                  "select2": {
+                    "type": "string",
+                    "example": "38"
+                  },
+                  "select3": {
+                    "type": "string",
+                    "example": "48"
+                  },
+                  "select4": {
+                    "type": "string",
+                    "example": "68"
+                  }
+                }
+              },
+              "examples": {
+                "Quiz : Create a new quiz": {
+                  "value": {
+                    "answer": "select1",
+                    "question": "88",
+                    "select1": "88",
+                    "select2": "38",
+                    "select3": "48",
+                    "select4": "68"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/quiz/109": {
+      "put": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz : Edit a quiz",
+        "description": "Quiz : Edit a quiz",
+        "operationId": "quizEditAQuiz",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "answer": {
+                    "type": "string",
+                    "example": "select2"
+                  },
+                  "question": {
+                    "type": "string",
+                    "example": "3 "
+                  },
+                  "select1": {
+                    "type": "string",
+                    "example": "8"
+                  },
+                  "select2": {
+                    "type": "string",
+                    "example": "3"
+                  },
+                  "select3": {
+                    "type": "string",
+                    "example": "4"
+                  },
+                  "select4": {
+                    "type": "string",
+                    "example": "6"
+                  }
+                }
+              },
+              "examples": {
+                "Quiz : Edit a quiz": {
+                  "value": {
+                    "answer": "select2",
+                    "question": "3 ",
+                    "select1": "8",
+                    "select2": "3",
+                    "select3": "4",
+                    "select4": "6"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/quiz/ai": {
+      "post": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz : Create a quiz by AI",
+        "description": "Quiz : Create a quiz by AI",
+        "operationId": "quizCreateAQuizByAi",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ai": {
+                    "type": "string",
+                    "example": "地球上的水大概有幾噸"
+                  }
+                }
+              },
+              "examples": {
+                "Quiz : Create a quiz by AI": {
+                  "value": {
+                    "ai": "地球上的水大概有幾噸"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/home": {
+      "get": {
+        "summary": "HomePage",
+        "description": "HomePage",
+        "operationId": "homepage",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": "el"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Users"
+    },
+    {
+      "name": "Admin"
+    },
+    {
+      "name": "Admin/Users"
+    },
+    {
+      "name": "Admin/Category"
+    },
+    {
+      "name": "Admin/Quiz"
+    },
+    {
+      "name": "Plan"
+    },
+    {
+      "name": "Test"
+    },
+    {
+      "name": "Result"
+    },
+    {
+      "name": "User"
+    },
+    {
+      "name": "Collect"
+    },
+    {
+      "name": "Quiz"
+    }
+  ]
+}

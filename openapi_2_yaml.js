@@ -1,7 +1,7 @@
 // change file name
-const file = ''
+const file = 'Quiz_app_collection'
 // change read openapi's route
-const collection = require(`./output_file//${file}_openapi.json`)
+const collection = require(`./output_file/${file}_output/${file}_openapi.json`)
 
 const fs = require("fs")
 const path = require('path')

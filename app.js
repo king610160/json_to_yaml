@@ -1,6 +1,6 @@
 const express = require('express')
 // change the route to swagger.json file
-const swaggerDocument = require('')
+const swaggerDocument = require('./output_file/Quiz_app_collection_output/Quiz_app_collection_openapi.json')
 
 const app = express()
 const swaggerUi = require('swagger-ui-express')
