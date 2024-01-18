@@ -49,7 +49,7 @@ npm run dev
 
 - 修改openapi_2_yaml中的collection變數，改為要讀取的檔案路徑
 
-- 啟動json_2_openapi，將postman.json轉換為swagger版本的json
+- 啟動openapi_2_yaml，將swagger版本的json轉換為yaml檔
 ```
 npm run yaml
 ```
